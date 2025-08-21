@@ -1,0 +1,24 @@
+---
+layout: default
+title: Free Me — Entry
+no_chrome: true
+body_class: entry-page
+permalink: /
+---
+
+<section class="entry">
+  <div class="entry-left">
+    <div class="logo-holder">
+      <img class="svg" src="{{ '/assets/img/logo-glow.png' | relative_url }}" alt="Free Me logo" />
+    </div>
+    <div class="brand-sub">free me</div>
+  </div>
+  <div class="gate-wrap">
+    <button class="gate-btn" id="gateBtn" aria-label="Enter site"></button>
+  </div>
+</section>
+
+<script>
+const btn = document.getElementById('gateBtn');
+btn.addEventListener('click', () => { window.location.href = '{{ '/home/' | relative_url }}'; });
+</script>

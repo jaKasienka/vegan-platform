@@ -1,0 +1,20 @@
+<nav class="pillar-nav" aria-label="Primary">
+  <div class="pillar" role="group" aria-label="Main navigation">
+    <button class="seg" data-seg="0" aria-controls="fly-0" aria-expanded="false">
+        <img class="icon-img" src="{{ '/assets/img/icons/home.svg' | relative_url }}" alt="Home">
+    </button>
+
+    <button class="seg" data-seg="0" aria-controls="fly-1" aria-expanded="false">
+        <img class="icon-img" src="{{ '/assets/img/icons/articles.svg' | relative_url }}" alt="Articles">
+    </button>
+
+    <button class="seg" data-seg="0" aria-controls="fly-2" aria-expanded="false">
+        <img class="icon-img" src="{{ '/assets/img/icons/info.svg' | relative_url }}" alt="About">
+    </button>
+
+    <!-- flyouts (same vertical positions as segments) -->
+    <a id="fly-0" class="fly" style="top:0px"   href="{{ '/home/'   | relative_url }}">Home</a>
+    <a id="fly-1" class="fly" style="top:60px"  href="{{ '/posts/'  | relative_url }}">Articles</a>
+    <a id="fly-2" class="fly" style="top:120px" href="{{ '/about/'  | relative_url }}">About</a>
+  </div>
+</nav>

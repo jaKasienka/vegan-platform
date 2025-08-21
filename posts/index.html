@@ -1,0 +1,28 @@
+---
+layout: default
+title: Articles
+permalink: /posts/
+---
+
+<section class="wrap">
+  <h1>Articles</h1>
+  <!-- Search -->
+  <div class="articles-search">
+    <input id="postSearch" type="search" placeholder="Search articles…" aria-label="Search articles">
+    <span id="postCount" class="count"></span>
+  </div>
+  <!-- Results -->
+  <div id="postList" class="grid">
+    {% assign posts_sorted = site.posts %}
+    {% for post in posts_sorted %}
+    <article class="card" data-title="{{ post.title | downcase }}" data-excerpt="{{ post.excerpt | strip_html | downcase }}">
+      <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+      <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+      <a class="read-more-btn" href="{{ post.url | relative_url }}">Read More</a>
+    </article>
+    {% endfor %}
+  </div>
+  <p id="noResults" class="muted" hidden>No matching articles found.</p>
+</section>
+
+<script src="{{ '/assets/js/articles.js' | relative_url }}"></script>

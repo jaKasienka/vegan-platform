@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }}</title>
+    {% seo %}
+    <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet" />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+  </head>
+  <body class="{{ page.body_class | default: '' }}">
+
+    <!-- debug banner locally -->
+    {% if jekyll.environment == "development" %}
+    <div style="background:#fffae6; border:1px solid #e6c300; padding:0.5em; text-align:center; font-size:0.9em; color:#665c00;">
+      🛠 Local Debug Mode <br>
+      Baseurl: <code>{{ site.baseurl }}</code> | URL: <code>{{ site.url }}</code> <br>
+      Test links: 
+      <a href="{{ site.baseurl }}/home" style="margin:0 5px;">Home</a> |
+      <a href="{{ site.baseurl }}/getting-vegan/" style="margin:0 5px;">Getting Vegan</a> |
+      <a href="{{ site.baseurl }}/about/" style="margin:0 5px;">About</a>
+    </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    <div class="page-shell">
+      {% if page.no_chrome %}
+        <!-- Entry: no split, no pillar -->
+        <main class="site-main">
+          {{ content }}
+        </main>
+      {% else %}
+        <!-- Normal pages: split layout with pillar -->
+        <div class="split">
+          <aside class="split-left">
+            {% include stack-nav.html %}
+          </aside>
+          <main class="split-main">
+            {{ content }}
+          </main>
+        </div>
+      {% endif %}
+      {% include footer.html %}
+    </div>
+    {% unless page.no_chrome %}
+      <script src="{{ '/assets/js/pillar.js' | relative_url }}"></script>
+    {% endunless %}
+  </body>
+</html>

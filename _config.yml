@@ -1,0 +1,21 @@
+title: "Free Me"
+description: "A vegan platform advocating for compassion, sustainability, and freedom for all living beings."
+url: "https://jaKasienka.github.io"
+baseurl: "/vegan-platform"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: "Katharina Cembik"
+  url: "https://github.com/jaKasienka"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - .jekyll-cache
