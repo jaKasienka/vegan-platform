@@ -133,6 +133,8 @@ body.entry-page{ background:var(--green); }
   .pillar-nav{ margin-left:80px; }
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
 .pillar{
   position:relative; width:60px; height:180px; border-radius:9999px;
   border:1.5px solid var(--blue);
@@ -140,12 +142,28 @@ body.entry-page{ background:var(--green); }
   box-shadow:0 12px 28px rgba(51,51,153,.35);
   overflow:visible; display:grid; grid-template-rows:repeat(3,60px); z-index:510;
 }
-.seg{ appearance:none; background:transparent; border:0; padding:0; margin:0; width:60px; height:60px; cursor:pointer; display:grid; place-items:center; }
-.icon-img{ width:24px; height:24px; display:block; }
+.seg {
+  appearance: none;
+  background: transparent;
+  transform: matrix(1, 0, 0, 1, -1, -1);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 59px;
+  height: 59px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.icon-img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
 
-/* Flyouts (open left, short like pillar) */
+/* Flyouts */
 .fly{
-  position:absolute; left:0;
+  position:absolute; left:-1px; /* fix to be aligned with pillar border */
   height:60px; width:0;
   display:flex; align-items:center; justify-content:center;
   border-radius:9999px; border:1.5px solid var(--blue);
@@ -157,8 +175,8 @@ body.entry-page{ background:var(--green); }
   overflow:hidden; z-index:520; pointer-events:none;
 }
 
-#fly-0{ top:0; } #fly-1{ top:60px; } #fly-2{ top:120px; }
-.fly.show{ width:140px; opacity:1; transform:translateX(0); pointer-events:auto; }
+#fly-0{ top:-1px; } #fly-1{ top:59px; } #fly-2{ top:119px; } /* fixes to be aligned with pillar border */
+.fly.show{ width:180px; opacity:1; transform:translateX(0px); pointer-events:auto; }
 .fly:hover{ border-color:var(--blue); }
 .fly:active{ background:linear-gradient(0deg, rgba(51,51,255,.50), rgba(51,51,255,.05)); box-shadow:0 6px 18px rgba(51,51,153,.45); }
 
@@ -237,7 +255,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 147px;
+  min-width: 180px;
   height: 58.4px;
   padding: 0 16px;
   margin-top: 24px;          
