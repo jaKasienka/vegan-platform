@@ -35,6 +35,7 @@ Then open: http://localhost:4000
 - Blue: #3333FF
 - Blue Deep: #333399
 - Content: #FAFAFA
+- Content Dark: #2b2b2b
 - Muted: #888
 
 ## Structure

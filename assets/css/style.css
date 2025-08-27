@@ -2,11 +2,11 @@
    Root & Base
 ===================================== */
 :root{
-  --content:#FAFAFA;
   --green:#66CC66;
   --blue:#3333FF;
   --blue-deep:#333399;
-  --text:#222;
+  --content:#FAFAFA;
+  --content-dark:#2b2b2b;
   --muted:#888;
 }
 
@@ -70,7 +70,7 @@ body.entry-page{ background:var(--green); }
 .gate-wrap{ margin-top:40px; display:flex; align-items:center; justify-content:center; }
 .gate-btn{
   width:60px; height:180px; border-radius:9999px;
-  background:linear-gradient(0deg, rgba(51,51,255,.80), rgba(51,51,255,.05));
+  background: linear-gradient(180deg, rgba(51,51,255,.2), rgba(51,51,255,1));
   border:1.2px solid var(--blue);
   box-shadow:0 6px 18px rgba(51,51,153,.45);
   cursor:pointer;
@@ -108,6 +108,11 @@ body.entry-page{ background:var(--green); }
   position:relative;
 }
 
+.split-main .wrap p, .split-main .wrap a{
+  color:var(--content-dark);
+  font-weight:600;
+}
+
 @media (max-width:900px){
   .split{ grid-template-columns:1fr; }
   .split-left{ padding:16px 0 0; }
@@ -138,10 +143,11 @@ body.entry-page{ background:var(--green); }
 .pillar{
   position:relative; width:60px; height:180px; border-radius:9999px;
   border:1.5px solid var(--blue);
-  background:linear-gradient(0deg, rgba(51,51,255,.80), rgba(51,51,255,.05));
+  background: linear-gradient(180deg, rgba(51,51,255,.2), rgba(51,51,255,1));
   box-shadow:0 12px 28px rgba(51,51,153,.35);
   overflow:visible; display:grid; grid-template-rows:repeat(3,60px); z-index:510;
 }
+
 .seg {
   appearance: none;
   background: transparent;
@@ -155,6 +161,7 @@ body.entry-page{ background:var(--green); }
   display: grid;
   place-items: center;
 }
+
 .icon-img {
   width: 24px;
   height: 24px;
@@ -167,7 +174,7 @@ body.entry-page{ background:var(--green); }
   height:60px; width:0;
   display:flex; align-items:center; justify-content:center;
   border-radius:9999px; border:1.5px solid var(--blue);
-  background:linear-gradient(0deg, rgba(51,51,255,.18), rgba(51,51,255,.05));
+  background: linear-gradient(180deg, rgba(51,51,255,.2), rgba(51,51,255,1));
   box-shadow:0 8px 22px rgba(51,51,153,.35);
   color:var(--content); text-decoration:none; font-weight:200; letter-spacing:.3px;
   padding:0 22px; opacity:0; transform:translateX(-12px);
@@ -191,57 +198,54 @@ body.entry-page{ background:var(--green); }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:var(--content);
+  color:var(--content-dark);
   font-weight:600;
   margin:0 0 16px;
 }
+
 h1 {
   font-size:2.4rem; 
   margin-bottom:80px;
   font-weight: 200;
 }
+
 h2 { 
   font-size:2rem; 
   margin: 60px 0 30px;
+  font-weight: 300;
 }
+
 h3 { 
   font-size:1.6rem; 
 }
 
 .card {
-  --card-bg: var(--green);
-  --card-fg: var(--content);
-  --card-border: var(--content);
-
   max-width:560px;
   margin:24px 0px 24px 0px;
   padding:20px;
   border-radius:16px;
-  border:1.6px solid var(--card-border);
-  background:var(--card-bg);
-  color:var(--card-fg);
+  border:1.6px solid var(--content-dark);
+  background: none;
+  color:var(--content-dark);
   box-shadow:0 6px 18px rgba(51,51,153,.35);
 }
 
-.card h3,
-.card p,
-.card a {
-  color:var(--card-fg);
-}
-
-.card h3 { 
-  margin:0 0 10px; 
-}
 .card p { 
   margin:0;
-  font-weight: 200; 
+  font-weight: 600; 
+  color: var(--content-dark);
 }
+
 .card a {
   text-decoration:none;
   font-weight: 200;
+  color:var(--content);
 }
+
 .card h3{
-  font-weight:600;
+  margin:0 0 10px; 
+  font-weight:300;
+  color:var(--content-dark)
 }
 
 .grid {
@@ -261,10 +265,10 @@ h3 {
   margin-top: 24px;          
   border-radius: 9999px;
   border: 1.2px solid var(--blue);
-  background: linear-gradient(0deg, rgba(51,51,255,.80), rgba(51,51,255,.05));
-  color: var(--content);
+  background: linear-gradient(180deg, rgba(51,51,255,.2), rgba(51,51,255,1));
+  color: var(--content) !important;
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 200 !important;
   box-shadow: 0 6px 18px rgba(51,51,153,.35);
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
@@ -342,6 +346,11 @@ h3 {
   margin-bottom: 1rem; /* space below image */
 }
 
+.card--highlight .card-title{
+  color: var(--content-dark);
+  font-weight: 300;
+}
+
 /* nice micro-lift on hover (respects users who prefer less motion) */
 @media (prefers-reduced-motion: no-preference){
   .card--highlight:hover{ transform: translateY(-2px); transition: transform .18s ease; }
@@ -356,7 +365,7 @@ h3 {
 .post-meta{ color:var(--muted); margin:0 0 18px; }
 .post-content{ line-height:1.7; font-weight:400; }
 .post-content h2, .post-content h3{ margin-top:1.6em; margin-bottom:.6em; }
-.post-content p{ margin:.8em 0; }
+.post-content p{ margin:.8em 0;}
 .post-content ul, .post-content ol{ padding-left:1.2em; margin:.6em 0 1em; }
 .post-content li+li{ margin-top:.35em; }
 .post-content a{ color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
@@ -383,8 +392,8 @@ h3 {
   box-shadow:0 6px 18px rgba(51,51,153,.25) inset;
 }
 
-.articles-search input::placeholder{ color:rgba(255,255,255,.85); }
-.articles-search .count{ color:var(--content); opacity:.9; font-size:.95rem; }
+.articles-search input::placeholder{ color:var(--content-dark); }
+.articles-search .count{ color:var(--content-dark); opacity:.9; font-size:.95rem; }
 .muted{ color:rgba(255,255,255,.9); }
 
 
