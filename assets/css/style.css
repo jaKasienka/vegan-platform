@@ -108,7 +108,7 @@ body.entry-page{ background:var(--green); }
   position:relative;
 }
 
-.split-main .wrap p, .split-main .wrap a{
+.split-main .wrap p, .split-main .wrap a, ul{
   color:var(--content-dark);
   font-weight:600;
 }
