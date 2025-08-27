@@ -110,7 +110,7 @@ body.entry-page{ background:var(--green); }
 
 .split-main .wrap p, .split-main .wrap a, ul{
   color:var(--content-dark);
-  font-weight:600;
+  font-weight:400;
 }
 
 @media (max-width:900px){
@@ -127,7 +127,7 @@ body.entry-page{ background:var(--green); }
 ===================================== */
 .pillar-nav{
   position:sticky; top:20vh; align-self:start;
-  width:max-content; margin-left:56px; z-index:500;
+  width:max-content; margin-left:56px; z-index:400;
 }
 
 @media (max-width:900px){
@@ -199,7 +199,7 @@ body.entry-page{ background:var(--green); }
 
 h1, h2, h3, h4, h5, h6 {
   color:var(--content-dark);
-  font-weight:600;
+  font-weight:400;
   margin:0 0 16px;
 }
 
@@ -232,7 +232,7 @@ h3 {
 
 .card p { 
   margin:0;
-  font-weight: 600; 
+  font-weight: 400;
   color: var(--content-dark);
 }
 
@@ -362,7 +362,7 @@ h3 {
 ===================================== */
 .post{ max-width:760px; }
 .post-title{ margin:10px 0 6px; line-height:1.2; }
-.post-meta{ color:var(--muted); margin:0 0 18px; }
+.post-meta{ color:var(--muted); font-style: italic; margin:0 0 18px; }
 .post-content{ line-height:1.7; font-weight:400; }
 .post-content h2, .post-content h3{ margin-top:1.6em; margin-bottom:.6em; }
 .post-content p{ margin:.8em 0;}

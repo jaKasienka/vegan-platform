@@ -43,7 +43,7 @@ Every plant-based meal saves lives, reduces emissions, and makes the world a lit
 
 - **Calcium**: fortified plant milks, tofu, leafy greens, almonds.
 
-- **Iodin**e: iodized salt or seaweed.
+- **Iodine**: iodized salt or seaweed.
 
 - **Zinc**: legumes, pumpkin seeds, oats, cashews.
 
