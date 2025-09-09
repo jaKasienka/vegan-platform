@@ -245,10 +245,30 @@ h3 {
   color:var(--content);
 }
 
+.card a:hover{
+  color:var(--blue);
+  text-decoration:underline;
+}
+
+.card a:active{
+  color:var(--muted);
+  text-decoration:none;
+}
+
 .card h3{
   margin:0 0 10px; 
   font-weight:300;
-  color:var(--content-dark)
+  color:var(--content-dark);
+}
+
+.card h3:hover{
+  color:var(--blue);
+  text-decoration:underline;
+}
+
+.card h3:active{
+  color:var(--muted);
+  text-decoration:none;
 }
 
 .grid {
@@ -278,12 +298,14 @@ h3 {
 }
 
 .read-more-btn:hover{
+  text-decoration: none !important;
   transform: translateY(-1px);
   background: linear-gradient(0deg, rgba(51,51,255,.30), rgba(51,51,255,.05));
   box-shadow: 0 8px 20px rgba(51,51,153,.55);
 }
 
 .read-more-btn:active{
+  text-decoration: none !important;
   transform: translateY(0);
   background: linear-gradient(0deg, rgba(51,51,255,.50), rgba(51,51,255,.05));
   box-shadow: 0 6px 18px rgba(51,51,153,.45);
