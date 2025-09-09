@@ -15,7 +15,9 @@ body_class: home-hero
       <img src="{{'/assets/img/getting-vegan-hero.jpg' | relative_url}}" 
        alt="Colorful fruits and vegetables" 
        class="card-hero">
-      <h3 class="card-title">Getting Vegan: Essentials</h3>
+      <a href="{{ '/getting-vegan/' | relative_url}}">
+        <h3 class="card-title">Getting Vegan: Essentials</h3>
+      </a>
       <p>Simple swaps, balanced nutrition, and everyday actions to start strong.</p>
       <a class="read-more-btn" href="{{ '/getting-vegan/' | relative_url}}">Read More</a>
     </article>
