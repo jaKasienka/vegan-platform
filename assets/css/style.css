@@ -267,11 +267,12 @@ h3 {
   padding: 0 16px;
   margin-top: 24px;          
   border-radius: 9999px;
-  border: 1.2px solid var(--blue-deep);
-  background: linear-gradient(180deg, rgba(51,51,255,.1), rgba(51,51,255,1));
-  color: var(--content) !important;
+  border: 1.2px solid var(--content-dark);
+  background: none;
+  /* background: linear-gradient(180deg, rgba(51,51,255,.1), rgba(51,51,255,1)); */
+  color: var(--content-dark) !important;
   text-decoration: none;
-  font-weight: 200 !important;
+  font-weight: 500 !important;
   box-shadow: 0 6px 18px rgba(51,51,153,.35);
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
@@ -337,7 +338,7 @@ h3 {
 /* give the button a hair more presence inside highlight */
 .card--highlight .read-more-btn{
   margin-top: 20px;
-  border-color: var(--blue-deep);
+  border-color: var(--content-dark);
 }
 
 .card--highlight .card-hero {
