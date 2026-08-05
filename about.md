@@ -10,25 +10,11 @@ permalink: /about/
   <p>We share clear, honest information about animal exploitation and the power of vegan choices — so you can learn, share, and take action.</p>
   <p><em>Free them. Free yourself.</em></p>
 
-  <h2>Contribute</h2>
-  <p>This site is open to thoughtful contributions — fixes, additions, or resources that help people go vegan with clarity and compassion.</p>
-  <p>You can propose changes on Github or contact me directly.
-    <a class="read-more-btn" href="https://github.com/jaKasienka/vegan-platform" target="_blank" rel="noopener">
-      Contribute on GitHub
-    </a>
-  </p>
-
-  <h2>Creator</h2>
-  <p>
-    Built by <a href="https://cembik.com" rel="me">Katharina Cembik</a>. 
-    Design-first, code-light — the goal is clarity over noise.
-  </p>
-
-  <h2>Petitions Hub</h2>
-  <p>Below are some key organizations (links) with current petitions (links). You can help drive change by signing directly through their platforms.</p>
+  <h2>Organizations Hub</h2>
+  <p>Below are some key organizations (links) with their Action Centers (links). You can help drive change by signing Petitions directly through their platforms.</p>
 
   <div class="grid">
-      <!-- PETA -->
+    <!-- PETA -->
     <article class="card org-card">
       <div class="org-head">
         <span class="org-logo" aria-hidden="true">
@@ -42,9 +28,7 @@ permalink: /about/
       </div>
       <p>PETA’s ongoing petitions on animal testing and corporate cruelty.</p>
       <ul>
-        <li><a href="https://support.peta.org/page/1146/petition/1?locale=en-US" target="_blank" rel="noopener">Pledge to Reject Fur</a></li>
-        <li><a href="https://support.peta.org/page/1483/petition/1?locale=en-US" target="_blank" rel="noopener">Pledge to End Animal Homelessness</a></li>
-        <li><a href="https://support.peta.org/page/1543/petition/1?locale=en-US" target="_blank" rel="noopener">Pledge to Boycott SeaWorld</a></li>
+        <li><a href="https://www.peta.org.uk/action-centre/" target="_blank" rel="noopener">Action Center</a></li>
       </ul>
     </article>
     <!-- Deutscher Tierschutzbund -->
@@ -98,7 +82,7 @@ permalink: /about/
       </div>
       <p>WWF campaigns to protect wildlife, habitats, and climate through policy change and public action.</p>
       <ul>
-        <li><a href="https://protect.worldwildlife.org/page/53558/petition/1?_gl=1*1jj7qbw*_ga*OTM3MjI5NjU1LjE3NTU2MTM4MDc.*_ga_FK6M9RK84Z*czE3NTU2MTM4MDckbzEkZzAkdDE3NTU2MTM4MDckajYwJGwwJGg4Mjc0MjAwNzA." target="_blank" rel="noopener">Protect tigers by switching to forest-friendly products</a></li>
+        <li><a href="https://protect.worldwildlife.org/page/53558/petition/1?_gl=1*1jj7qbw*_ga*OTM3MjI5NjU1LjE3NTU2MTM4MDc.*_ga_FK6M9RK84Z*czE3NTU2MTM4MDckbzEkZzAkdDE3NTU2MTM4MDckajYwJGwwJGg4Mjc0MjAwNzA." target="_blank" rel="noopener">Protect wildlife by switching to forest-friendly products</a></li>
         <li><a href="https://protect.worldwildlife.org/page/53484/petition/1?_gl=1*tmsg7w*_gcl_au*MTk5NjM3NDExNy4xNzU1NjE0Mjk0*_ga*OTM3MjI5NjU1LjE3NTU2MTM4MDc.*_ga_FK6M9RK84Z*czE3NTU2MTM4MDckbzEkZzEkdDE3NTU2MTQzMzkkajE1JGwwJGg4Mjc0MjAwNzA." target="_blank" rel="noopener">Sign On to Stop Wildlife Crime</a></li>
         <li><a href="https://protect.worldwildlife.org/page/86643/petition/1?_gl=1*2mlyfv*_gcl_au*MTk5NjM3NDExNy4xNzU1NjE0Mjk0*_ga*OTM3MjI5NjU1LjE3NTU2MTM4MDc.*_ga_FK6M9RK84Z*czE3NTU2MTM4MDckbzEkZzEkdDE3NTU2MTQ0MDQkajYwJGwwJGg4Mjc0MjAwNzA." target="_blank" rel="noopener">An ambitious treaty on plastic pollution</a></li>
       </ul>
@@ -121,10 +105,39 @@ permalink: /about/
         <li><a href="https://engage.us.greenpeace.org/onlineactions/0ncfx1VV2E2JJmpQxrEbBg2?utm_source=instagram&utm_medium=post&utm_campaign=210702_cleancreatives__izzzzzzzzzcz&sourceid=1010944" target="_blank" rel="noopener">Tell Social Media Companies to Drop Fossil Fuel Ads!</a></li>
       </ul>
     </article>
+    <!-- Petitions -->
+    <article class="card org-card">
+      <div class="org-head">
+        <h3 class="org-title" style="pointer-events: none; cursor: default; text-decoration: none; color: inherit;">
+          UK Petitions to sign!!!
+        </h3>
+      </div>
+      <ul data-org="animal-rights-org" class="global-petition-list">
+        <!-- Static placeholders will be completely cleared by JS -->
+        <li>Loading petitions...</li>
+      </ul>
+    </article>
   </div>
 
   <p style="margin-top:24px; opacity: .9;">
     Can’t find a petition you support? <a href="https://github.com/jaKasienka/vegan-platform/issues" target="_blank" rel="noopener">
     Suggest it here</a> and we’ll add it.
   </p>
+  
+  <h2>Contribute</h2>
+  <p>This site is open to thoughtful contributions — fixes, additions, or resources that help people go vegan with clarity and compassion.</p>
+  <p>You can propose changes on Github or contact me directly.
+    <a class="read-more-btn" href="https://github.com/jaKasienka/vegan-platform" target="_blank" rel="noopener">
+      Contribute on GitHub
+    </a>
+  </p>
+
+  <h2>Creator</h2>
+  <p>
+    Built by <a href="https://cembik.com" rel="me">Katharina Cembik</a>. 
+    Design-first, code-light — the goal is clarity over noise.
+  </p>
+
 </div>
+
+<script src="{{ '/assets/js/petitions.js' | relative_url }}"></script>
