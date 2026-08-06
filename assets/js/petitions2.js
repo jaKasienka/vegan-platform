@@ -25,24 +25,32 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // 4. Loop through each petition object
       petitions.forEach(petition => {
         // Extract required fields based on the API nesting
         const petitionId = petition.id;
         const actionText = petition.attributes.action;
+        const signatures = petition.attributes.signature_count;
         const petitionUrl = `https://petition.parliament.uk/petitions/${petitionId}`;
 
         // 5. Create DOM elements safely to prevent XSS
         const li = document.createElement('li');
         const link = document.createElement('a');
+        const text = document.createElement('p');
+        const nl = document.createElement('br');
         
         link.href = petitionUrl;
+        //link.textContent = actionText;
+        // Example: "Ban the use of snares - 8,420 signatures"
+        const formattedCount = signatures.toLocaleString();
         link.textContent = actionText;
+        text.textContent = ` —> ${formattedCount} signatures`;
         link.target = '_blank';
         link.rel = 'noopener noreferrer'; // Essential security for target="_blank"
 
         // 6. Append elements back to the card container
         li.appendChild(link);
+        li.appendChild(text);
+        li.appendChild(nl);
         petitionList.appendChild(li);
       });
     })
