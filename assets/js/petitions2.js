@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // 4. Loop through each petition object
       petitions.forEach(petition => {
         // Extract required fields based on the API nesting
         const petitionId = petition.id;
@@ -33,24 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const petitionUrl = `https://petition.parliament.uk/petitions/${petitionId}`;
 
         // 5. Create DOM elements safely to prevent XSS
+        const div = document.createElement('div');
+        div.className = 'global-petition-card';
         const li = document.createElement('li');
-        const link = document.createElement('a');
-        const text = document.createElement('p');
-        const nl = document.createElement('br');
+        const button = document.createElement('a');
+        button.className = 'global-petition-btn';
+        button.setAttribute('style', 'text-decoration:none;');
+        const text1 = document.createElement('h4');
+        const text2 = document.createElement('p');
         
-        link.href = petitionUrl;
-        //link.textContent = actionText;
+        button.href = petitionUrl;
+        button.textContent = "Sign Petition";
         // Example: "Ban the use of snares - 8,420 signatures"
-        const formattedCount = signatures.toLocaleString();
-        link.textContent = actionText;
-        text.textContent = ` —> ${formattedCount} signatures`;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer'; // Essential security for target="_blank"
+        const formattedCount = signatures.toLocaleString('en-GB');
+        text1.textContent = actionText;
+        text2.textContent = `${formattedCount} signatures`;
+        button.target = '_blank';
+        button.rel = 'noopener noreferrer'; // Essential security for target="_blank"
 
         // 6. Append elements back to the card container
-        li.appendChild(link);
-        li.appendChild(text);
-        li.appendChild(nl);
+        div.appendChild(text1);
+        div.appendChild(text2);
+        div.appendChild(button);
+        li.appendChild(div);
         petitionList.appendChild(li);
       });
     })

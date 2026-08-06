@@ -222,6 +222,10 @@ h3 {
   font-size:1.6rem; 
 }
 
+h4 { 
+  font-size:1.25rem; 
+}
+
 .card {
   max-width:560px;
   margin:24px 0px 24px 0px;
@@ -311,6 +315,92 @@ h3 {
   box-shadow: 0 6px 18px rgba(51,51,153,.45);
 }
 
+/* =====================================
+   Card for Petitions List (ul.global-petition-list)
+===================================== */
+
+.global-petition-card {
+  max-width:560px;
+  margin:24px 0px 24px 0px;
+  padding:20px;
+  border-radius:16px;
+  border:1.4px solid var(--content-dark);
+  background: none;
+  color:var(--content-dark);
+  box-shadow:0 6px 18px rgba(51,51,153,.35);
+}
+
+.global-petition-card p { 
+  margin:3px 0 !important;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--content-dark);
+}
+
+.global-petition-card a {
+  text-decoration:none;
+  font-weight: 200;
+  color:var(--content);
+}
+
+.global-petition-card a:hover{
+  color:var(--blue);
+  text-decoration:underline;
+}
+
+.global-petition-card a:active{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.global-petition-card h4{
+  margin:0 0 7px; 
+  font-weight:400;
+  font-size:1.25rem;
+  line-height:1.2;
+  color:var(--content-dark);
+}
+
+.global-petition-list {
+  list-style: none;
+  padding: 0; /* Clears standard left indentation */
+  margin: 0;  /* Clears default top/bottom margins */
+}
+
+/* button inside petition */
+.global-petition-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 35px;
+  padding: 0 16px;
+  margin-top: 10px;          
+  border-radius: 9999px;
+  border: 1.2px solid var(--content-dark);
+  background: none;
+  /* background: linear-gradient(180deg, rgba(51,51,255,.1), rgba(51,51,255,1)); */
+  color: var(--content-dark) !important;
+  text-decoration: none;
+  font-weight: 500 !important;
+  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(51,51,153,.35);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.global-petition-btn:hover{
+  text-decoration: none !important;
+  transform: translateY(-1px);
+  background: linear-gradient(0deg, rgba(51,51,255,.30), rgba(51,51,255,.05));
+  box-shadow: 0 8px 20px rgba(51,51,153,.55);
+}
+
+.global-petition-btn:active{
+  text-decoration: none !important;
+  transform: translateY(0);
+  background: linear-gradient(0deg, rgba(51,51,255,.50), rgba(51,51,255,.05));
+  box-shadow: 0 6px 18px rgba(51,51,153,.45);
+}
 
 /* =====================================
    Card Variants
