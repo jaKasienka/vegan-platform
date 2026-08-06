@@ -105,25 +105,7 @@ permalink: /about/
         <li><a href="https://engage.us.greenpeace.org/onlineactions/0ncfx1VV2E2JJmpQxrEbBg2?utm_source=instagram&utm_medium=post&utm_campaign=210702_cleancreatives__izzzzzzzzzcz&sourceid=1010944" target="_blank" rel="noopener">Tell Social Media Companies to Drop Fossil Fuel Ads!</a></li>
       </ul>
     </article>
-    <!-- Petitions -->
-    <article class="card org-card">
-      <div class="org-head">
-        <h3 class="org-title" style="pointer-events: none; cursor: default; text-decoration: none; color: inherit;">
-          UK Petitions to sign!!!
-        </h3>
-      </div>
-      <ul data-org="animal-rights-org" class="global-petition-list">
-        <!-- Static placeholders will be completely cleared by JS -->
-        <li>Loading petitions...</li>
-      </ul>
-    </article>
-  </div>
 
-  <p style="margin-top:24px; opacity: .9;">
-    Can’t find a petition you support? <a href="https://github.com/jaKasienka/vegan-platform/issues" target="_blank" rel="noopener">
-    Suggest it here</a> and we’ll add it.
-  </p>
-  
   <h2>Contribute</h2>
   <p>This site is open to thoughtful contributions — fixes, additions, or resources that help people go vegan with clarity and compassion.</p>
   <p>You can propose changes on Github or contact me directly.
@@ -139,5 +121,3 @@ permalink: /about/
   </p>
 
 </div>
-
-<script src="{{ '/assets/js/petitions.js' | relative_url }}"></script>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const petitionList = document.querySelector('[data-org="animal-rights-org"]');
+  const petitionList = document.querySelector('[data-org="wildlife-org"]');
   
   // 1. Fetch from the UK Parliament API endpoint
   const API_ENDPOINT = 'https://petition.parliament.uk/petitions.json?q=wildlife&state=open';

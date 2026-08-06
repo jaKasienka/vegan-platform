@@ -85,7 +85,7 @@ Veganism goes further than diet:
 
 ### Contribution & Activism
 
-- Sign and share petitions — you can find some on the About page of this website.
+- Sign and share petitions — you can find some here on the Home page of this website.
 
 - Volunteer with animal rights or environmental groups.
 
