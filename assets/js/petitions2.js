@@ -4,6 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Fetch from the UK Parliament API endpoint
   const API_ENDPOINT = 'https://petition.parliament.uk/petitions.json?q=animal&state=open';
 
+
+  fetch('https://petition.parliament.uk/petitions.json?q=animal&state=open')
+  .then(res => res.json())
+  .then(data => {
+    // ONE-LINER FILTER: drop any title containing "testing"
+    const petitions = data.data.filter(p => !p.attributes.action.toLowerCase().includes('testing'));
+
+    // Pass 'petitions' to your existing render loop
+    petitions.forEach(petition => {
+      // your card creation code here...
+    });
+  });
+
   fetch(API_ENDPOINT)
     .then(response => {
       if (!response.ok) throw new Error('Network response failed');
@@ -12,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(jsonResponse => {
       // 2. Clear the static "Loading petitions..." text
       petitionList.innerHTML = '';
-
-      // 3. Access the 'data' array from the API response
-      // const petitions = jsonResponse.data; // all petitions, but we only want a limited number
 
       // LIMIT IS APPLIED HERE: slices the array from index 0 up to x
       const x = 50; // Define the number of petitions to display
@@ -25,8 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // ONE-LINER FILTER: drop any title containing "neuter"
+      const filteredPetitions = petitions.filter(f => !f.attributes.action.toLowerCase().includes('neuter'));
+
       // 4. Loop through each petition object
-      petitions.forEach(petition => {
+      filteredPetitions.forEach(petition => {
         // Extract required fields based on the API nesting
         const petitionId = petition.id;
         const actionText = petition.attributes.action;

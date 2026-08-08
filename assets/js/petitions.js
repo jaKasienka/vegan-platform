@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // const petitions = jsonResponse.data; // all petitions, but we only want a limited number
 
       // LIMIT IS APPLIED HERE: slices the array from index 0 up to x
-      const x = 24; // Define the number of petitions to display
+      const x = 50; // Define the number of petitions to display
       const petitions = jsonResponse.data.slice(0, x);
 
       if (!petitions || petitions.length === 0) {
@@ -25,8 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // ONE-LINER FILTER: drop any title containing "neuter"
+      const filteredPetitions = petitions.filter(f => !f.attributes.action.toLowerCase().includes('neuter'));
+
+      // filter for multiple words using a blocklist
+      /* const blocklist = ['what', 'really', 'wtf'];
+      const petitions = jsonResponse.data.filter(f => 
+        !blocklist.some(word => f.attributes.action.toLowerCase().includes(word))); */
+
       // 4. Loop through each petition object
-      petitions.forEach(petition => {
+      filteredPetitions.forEach(petition => {
         // Extract required fields based on the API nesting
         const petitionId = petition.id;
         const actionText = petition.attributes.action;
